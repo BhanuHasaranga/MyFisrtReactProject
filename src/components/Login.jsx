@@ -10,19 +10,25 @@ export const Login = (props) => {
     }
   return (
     <div>
-      <h1>login</h1>
-      <form action="" onSubmit={handleSubmit}>
+      <div className='d-flex flex-column w-25 m-auto'>
+        <div className="mx-auto">
+          <h1>Login</h1>
+        </div>
+        <form action="" onSubmit={handleSubmit}>
+          <div className='form-group row'>
+            <label htmlFor="email" className='col-1 col-form-label'>Email</label>
+            <input className='form-control m-2' value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='youremail@gmail.com' id='email' name='email' />
 
-        <label htmlFor="email">email</label>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='youremail@gmail.com' id='email' name='email' />
+            <label htmlFor="password" className='col-1 col-form-label'>Password</label>
+            <input className='form-control m-2' value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='********' id='password' name='password' />
+          </div>
 
-        <label htmlFor="password">password</label>
-        <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='********' id='password' name='password' />
 
-        <button type='submit'>Log In</button>
+          <button className='btn btn-primary mb-2' type='submit'>Log In</button>
 
-      </form>
-      <button onClick={() => props.onFormSwitch('register')}>Don't have account? Register here</button>
+        </form>
+        <button className='btn btn-link m-4' onClick={() => props.onFormSwitch('register')}>Don't have account? Register here</button>
+      </div>
     </div>
   )
 }

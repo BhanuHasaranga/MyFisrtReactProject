@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css'
 
 function App() {
 

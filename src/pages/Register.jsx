@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import {Login} from '../components/Login'
+import Header from '../components/Header';
+import {Login} from '../components/Login';
 import {Signup} from '../components/Signup'
 
 export default function Register() {
@@ -10,6 +11,7 @@ export default function Register() {
     }
   return (
     <div>
+        <Header/>
       {
         currentForm === "login" ? <Login onFormSwitch={togggleForm}/> : <Signup onFormSwitch={togggleForm}/>
       }
