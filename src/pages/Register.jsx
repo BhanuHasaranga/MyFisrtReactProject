@@ -1,6 +1,6 @@
-import React from 'react'
-import {Login} from './Login'
-import {Register} from './Signup'
+import React, {useState} from 'react'
+import {Login} from '../components/Login'
+import {Signup} from '../components/Signup'
 
 export default function Register() {
         const [currentForm, setCurrentForm] = useState('login');
@@ -11,7 +11,7 @@ export default function Register() {
   return (
     <div>
       {
-        currentForm === "login" ? <Login onFormSwitch={togggleForm}/> : <Register onFormSwitch={togggleForm}/>
+        currentForm === "login" ? <Login onFormSwitch={togggleForm}/> : <Signup onFormSwitch={togggleForm}/>
       }
     </div>
   )
