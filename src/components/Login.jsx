@@ -60,7 +60,7 @@ export const Login = ({ onFormSwitch }) => {
           </div>
 
           <Link to="/">
-            <button className="btn btn-light mb-2" type="submit">
+            <button className="btn btn-primary mb-2" type="submit">
               Log in
             </button>
           </Link>

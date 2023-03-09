@@ -41,11 +41,11 @@ export const Signup = (props) => {
           <label htmlFor="password" className='col-1 col-form-label'>password</label>
           <input className='form-control m-2' value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='********' id='password' name='password' />
         </div>
-        <button className='btn btn-light mb-2' type='submit'>
-          <Link to="/">
-            Sign Up
-          </Link>
-        </button>
+        <Link to="/">
+          <button className="btn btn-primary mb-2" type="submit">
+            Sign up
+          </button>
+        </Link>
 
       </form>
       <button className='btn btn-link m-4' onClick={() => props.onFormSwitch('login')}>Already have account? Login here</button>

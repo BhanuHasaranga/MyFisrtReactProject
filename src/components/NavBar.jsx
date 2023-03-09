@@ -12,12 +12,12 @@ export default function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item ">
-                            <Link className="nav-link active" to="/">
+                            <Link className="nav-link active text-decoration-none" to="/">
                                 Home 
                             </Link>
                         </li >
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/members">
+                            <Link className="nav-link active text-decoration-none" to="/members">
                                 Members
                             </Link>
                         </li>
@@ -26,7 +26,7 @@ export default function NavBar() {
                 <div className="nav justify-content-end">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/register">
+                            <Link className="nav-link active text-decoration-none" to="/register">
                                 Register
                             </Link>
                         </li>
