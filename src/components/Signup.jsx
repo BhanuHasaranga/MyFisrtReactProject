@@ -10,6 +10,20 @@ export const Signup = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(name,email,password);
+
+        // const userData = { name, email, password };
+        // console.log(userData);
+    
+        // fetch('http://your-backend-api.com/signup', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body: JSON.stringify(userData),
+        // })
+        //   .then((response) => response.json())
+        //   .then((data) => console.log(data))
+        //   .catch((error) => console.error(error))
     }
   return (
     <div className='d-flex flex-column w-25 m-auto'>

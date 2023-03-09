@@ -5,29 +5,7 @@ import MemberList from '../components/MemberList'
 export default function Members() {
 
   const [loadData, setLoadData] = useState(new Date())
-  const [members, setMember] = useState(
-    [
-      {
-        id: 1,
-        name: {
-            "title": "Miss",
-            "first": "Jennie",
-            "last": "Nichols"
-        },
-        location: {
-            "city": "Billings"
-        },
-        email: "jennie.nichols@example.com",
-        dob: {
-            "date": "1992-03-08T15:13:16.688Z",
-            "age": 30
-        },
-        picture: {
-            "medium": "https://randomuser.me/api/portraits/med/men/75.jpg"
-        }
-      }
-    ]
-  )
+  const [members, setMember] = useState([])
 
   useEffect(() => {
     fetch('https://randomuser.me/api/').then(Response => {
@@ -51,7 +29,6 @@ export default function Members() {
             )
         })  
     }
-
     const addUserHandler = () => {
       setLoadData(new Date())
     }
