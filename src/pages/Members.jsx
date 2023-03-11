@@ -36,8 +36,11 @@ export default function Members() {
   return (
     <div>
       <Header/>
-      <div className="container mt-4">
-        <button className='btn btn-primary mb-2' onClick={addUserHandler}>Add Member</button>
+      <div className="container mt-4 ">
+        <div className='d-flex justify-content-between'>
+          <button className='btn btn-primary mb-2' onClick={addUserHandler}>Add Member Auto</button>
+          <button className='btn btn-primary mb-2'>Add Member Manually</button>
+        </div>
       <ul className='list-group'> 
         {memberListComp()}
       </ul>

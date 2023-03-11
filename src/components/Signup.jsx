@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
-import { Link } from "react-router-dom"
+import React, {useState} from 'react'
+import {Link} from "react-router-dom"
 
 export const Signup = (props) => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(name,email,password);
+    const handleSubmit = (event) => {
+      event.preventDefault()
+        console.log(name,email,password)
 
         // const userData = { name, email, password };
         // console.log(userData);
@@ -33,13 +33,13 @@ export const Signup = (props) => {
       <form action="" onSubmit={handleSubmit}>
         <div className='form-group row'>
           <label htmlFor="name" className='col-3 col-form-label'>Full Name</label>
-          <input className='form-control m-2' value={name} onChange={(e) => setName(e.target.value)} type="name" placeholder='Full Name' id='name' name='name' />
+          <input className='form-control m-2' value={name} onChange={(event) => setName(event.target.value)} type="name" placeholder='Full Name' id='name' name='name' />
 
           <label htmlFor="email" className='col-1 col-form-label'>email</label>
-          <input className='form-control m-2' value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='youremail@gmail.com' id='email' name='email' />
+          <input className='form-control m-2' value={email} onChange={(event) => setEmail(event.target.value)} type="email" placeholder='youremail@gmail.com' id='email' name='email' />
 
           <label htmlFor="password" className='col-1 col-form-label'>password</label>
-          <input className='form-control m-2' value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='********' id='password' name='password' />
+          <input className='form-control m-2' value={password} onChange={(event) => setPassword(event.target.value)} type="password" placeholder='********' id='password' name='password' />
         </div>
         <Link to="/">
           <button className="btn btn-primary mb-2" type="submit">
